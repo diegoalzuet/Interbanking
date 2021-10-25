@@ -66,7 +66,7 @@
                         <button type="button" data-bs-target="#carousel-obras" data-bs-slide-to="4"
                             aria-label="Slide 5"></button>
                     </div>
-                    
+
                     <!-- IMAGENES DEL CARROUSEL -->
                     <div class="carousel-inner">
                         <div class="carousel-item active">
@@ -135,35 +135,20 @@
                 <div class="row w-75  m-auto pb-5 text-white">
                     <div class="col-md-4">
                         <p class="py-2 px-2">
-                            <img src="../img/img7.png" class="d-block w-100 rounded border border-dark" alt="...">
+                            <img src="../img/img7.png" class="d-block w-100 rounded border border-dark" id="aca"
+                                alt="...">
                         </p>
                     </div>
                     <div class="col-md-4">
                         <p class="py-2 px-2">
-                            <img src="../img/img8.png" class="d-block w-100 rounded border border-dark" alt="...">
+                            <img src="../img/img8.png" class="d-block w-100 rounded border border-dark"
+                                alt="...">
                         </p>
                     </div>
                     <div class="col-md-4">
                         <p class="py-2 px-2">
-                            <img src="../img/img9.png" class="d-block w-100 rounded border border-dark" alt="...">
-                        </p>
-                    </div>
-                </div>
-
-                <div class="row w-75  m-auto pb-5 text-white">
-                    <div class="col-md-4">
-                        <p class="py-2 px-2">
-                            <img src="../img/img10.jpg" class="d-block w-100 rounded border border-dark" alt="...">
-                        </p>
-                    </div>
-                    <div class="col-md-4">
-                        <p class="py-2 px-2">
-                            <img src="../img/img11.jpg" class="d-block w-100 rounded border border-dark" alt="...">
-                        </p>
-                    </div>
-                    <div class="col-md-4">
-                        <p class="py-2 px-2">
-                            <img src="../img/img12.jpg" class="d-block w-100 rounded border border-dark" alt="...">
+                            <img src="../img/img9.png" class="d-block w-100 rounded border border-dark"
+                                alt="...">
                         </p>
                     </div>
                 </div>
@@ -171,25 +156,51 @@
                 <div class="row w-75  m-auto pb-5 text-white">
                     <div class="col-md-4">
                         <p class="py-2 px-2">
-                            <img src="../img/img1.png" class="d-block w-100 rounded border border-dark" alt="...">
+                            <img src="../img/img10.jpg"
+                                class="d-block w-100 rounded border border-dark" alt="...">
                         </p>
                     </div>
                     <div class="col-md-4">
                         <p class="py-2 px-2">
-                            <img src="../img/img13.png" class="d-block w-100 rounded border border-dark" alt="...">
+                            <img src="../img/img11.jpg"
+                                class="d-block w-100 rounded border border-dark" alt="...">
                         </p>
                     </div>
                     <div class="col-md-4">
                         <p class="py-2 px-2">
-                            <img src="../img/img14.jpg" class="d-block w-100 rounded border border-dark" alt="...">
+                            <img src="../img/img12.jpg"
+                                class="d-block w-100 rounded border border-dark" alt="...">
+                        </p>
+                    </div>
+                </div>
+
+                <div class="row w-75  m-auto pb-5 text-white">
+                    <div class="col-md-4">
+                        <p class="py-2 px-2">
+                            <img src="../img/img1.png" class="d-block w-100 rounded border border-dark"
+                                alt="...">
+                        </p>
+                    </div>
+                    <div class="col-md-4">
+                        <p class="py-2 px-2">
+                            <img src="../img/img13.png"
+                                class="d-block w-100 rounded border border-dark" alt="...">
+                        </p>
+                    </div>
+                    <div class="col-md-4">
+                        <p class="py-2 px-2">
+                            <img src="../img/img14.jpg"
+                                class="d-block w-100 rounded border border-dark" alt="...">
                         </p>
                     </div>
                 </div>
 
             </section>
-            <button id="btn-mas-menos" class="btn btn-link rounded text-white fs-4" type="button"
+            <!-- <button id="btn-mas-menos" class="btn btn-link rounded text-white fs-4" type="button"
                 data-bs-toggle="collapse" data-bs-target="#mas-obras" aria-expanded="false" aria-controls="mas-obras"
-                onclick="cambiarFlecha();"><i class="fas fa-angle-double-down"></i></button>
+                onclick="cambiarFlecha();"><i class="fas fa-angle-double-down"></i></button> -->
+
+                <button id="btn-mas-menos" class="btn btn-link rounded text-white fs-4" type="button"><i class="fas fa-angle-double-down"></i></button>
         </div>
         <!-- FIN SECCION MAS OBRAS -->
 
@@ -225,21 +236,15 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>
+    <!-- JQUERY -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
     <!--PARALLAX-->
     <script src="../js/universal-parallax.min.js"></script>
-    <script>
-        new universalParallax().init({
-            speed: 20.0
-        });
 
-        function cambiarFlecha() {
-            let boton = document.getElementById('btn-mas-menos');
-            if (boton.innerHTML == '<i class="fas fa-angle-double-down"></i>')
-                boton.innerHTML = '<i class="fas fa-angle-double-up"></i>';
-            else
-                boton.innerHTML = '<i class="fas fa-angle-double-down"></i>';
-        }
-    </script>
+    <script src="../js/MiArte.js"></script>
+
 </body>
 
 </html>
