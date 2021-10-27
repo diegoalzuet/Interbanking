@@ -8,7 +8,7 @@ class ObraDeArte {
     // }
 
     constructor(obj){
-        this.idObra = parseInt(obj.idObra);
+        this.idObra = obj.idObra;
         this.nombre = obj.nombre;
         this.tipoObra = obj.tipoObra;
         this.tecnicaAplicada = obj.tecnicaAplicada;
@@ -16,7 +16,7 @@ class ObraDeArte {
         this.ruta = obj.rutaImg;
     }
     //INICIALIZA CON VALORES ALEATORIOS EL CATALOGO DE OBRAS A VENDER
-    agregarAlCatalogo() {
+    agregarAlDOM() {
         let div = document.getElementById('div-row');
         let contenedor = document.createElement("div");
         contenedor.className = 'col-10 col-md-10 col-lg-6 m-auto';
