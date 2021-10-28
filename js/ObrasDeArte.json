@@ -1,0 +1,66 @@
+[
+    {
+        "idObra": 0,
+        "nombre": "Cómo sobrevivir al ataque de un gnomo de Jardín",
+        "tipoObra": "Tipo de obra JSON",
+        "tecnicaAplicada": "Tecnica Aplicada JSON",
+        "precio": 1200,
+        "rutaImg":"../img/img1.png"
+    },
+    {
+        "idObra": 1,
+        "nombre": "Hazlo tú mismo: Ataúdes para mascotas y personas.",
+        "tipoObra": "Tipo de obra JSON",
+        "tecnicaAplicada": "Tecnica Aplicada JSON",
+        "precio": 3200,
+        "rutaImg":"../img/img2.png"
+    },
+    {
+        "idObra": 2,
+        "nombre": "El suspiro del cascote",
+        "tipoObra": "Tipo de obra JSON",
+        "tecnicaAplicada": "Tecnica Aplicada JSON",
+        "precio": 5400,
+        "rutaImg":"../img/img3.png"
+    },
+    {
+        "idObra": 3,
+        "nombre": "El viril arte de tejer",
+        "tipoObra": "Tipo de obra JSON",
+        "tecnicaAplicada": "Tecnica Aplicada JSON",
+        "precio": 7600,
+        "rutaImg":"../img/img4.png"
+    },
+    {
+        "idObra": 4,
+        "nombre": "Las chicas buenas van al cielo y las malas a todas partes",
+        "tipoObra": "Tipo de obra JSON",
+        "tecnicaAplicada": "Tecnica Aplicada JSON",
+        "precio": 9600,
+        "rutaImg":"../img/img5.jpg"
+    },
+    {
+        "idObra": 5,
+        "nombre": "Gente que viene y bah",
+        "tipoObra": "Tipo de obra JSON",
+        "tecnicaAplicada": "Tecnica Aplicada JSON",
+        "precio": 6200,
+        "rutaImg":"../img/img7.png"
+    },
+    {
+        "idObra": 6,
+        "nombre": "Bestiario",
+        "tipoObra": "Tipo de obra JSON",
+        "tecnicaAplicada": "Tecnica Aplicada JSON",
+        "precio": 7120,
+        "rutaImg":"../img/img6.jpg"
+    },
+    {
+        "idObra": 7,
+        "nombre": "El arte de cagar en el monte",
+        "tipoObra": "Tipo de obra JSON",
+        "tecnicaAplicada": "Tecnica Aplicada JSON",
+        "precio": 12900,
+        "rutaImg":"../img/img8.png"
+    }
+]

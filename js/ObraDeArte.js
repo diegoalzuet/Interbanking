@@ -13,24 +13,26 @@ class ObraDeArte {
         this.tipoObra = obj.tipoObra;
         this.tecnicaAplicada = obj.tecnicaAplicada;
         this.precio = parseFloat(obj.precio);
+        this.ruta = obj.rutaImg;
     }
     //INICIALIZA CON VALORES ALEATORIOS EL CATALOGO DE OBRAS A VENDER
-    agregarAlCatalogo() {
+    agregarAlDOM() {
         let div = document.getElementById('div-row');
         let contenedor = document.createElement("div");
-        contenedor.className = 'col-4';
+        contenedor.className = 'col-10 col-md-10 col-lg-6 m-auto';
         contenedor.innerHTML = `<div class="card mb-3" style="max-width: 540px;">
                                     <div class="row no-gutters">
-                                        <div class="col-md-4">
-                                            <img src="../img/arte4.jpg" class="card-img" alt="...">
+                                        <div class="col-md-5">
+                                            <img src="${this.ruta}" class="card-img" alt="...">
                                         </div>
-                                        <div class="col-md-8">
+                                        <div class="col-md-7">
                                             <div class="card-body">
                                                 <h5 class="card-title">${this.nombre}</h5>
                                                 <p class="card-text">${this.tipoObra}</p>
                                                 <p class="card-text">${this.tecnicaAplicada}</p>
                                                 <p class="card-text">$${this.precio}</p>
-                                                <button id=${this.idObra} onclick="agregarAlCarrito(this.id)">Agregar a carrito</button>
+                                                <button id=${this.idObra} onclick="agregarAlCarrito(this.id)"
+                                                data-bs-toggle="modal" data-bs-target="#staticBackdrop">Agregar a carrito</button>
                                             </div>
                                         </div>
                                     </div>

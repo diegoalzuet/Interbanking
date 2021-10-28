@@ -4,11 +4,27 @@ class Carrito {
     }
 
     agregarAlCarrito(producto) {
-        if (this.productos.length == 0 && localStorage.getItem('carrito') !== null) {
-            this.productos = JSON.parse(localStorage.getItem('carrito'));
+        if (localStorage.getItem('carrito') !== null && (this.productos.length == 0)) {
+           
+                const enStorage = JSON.parse(localStorage.getItem('carrito'));
+                for (const objeto of enStorage) {
+                    this.productos.push(new ObraDeArte(objeto));
+            }
         }
         this.productos.push(producto);
-        localStorage.setItem('carrito', JSON.stringify(this.productos));
+       
+        //CREO UN NUEVO ARRAY SIN DUPLICADOS
+        const productosSinDuplicados = [...new Set(this.productos)];
+
+        productosSinDuplicados.forEach((item) => {
+            const obra = this.productos.filter((obraEnProductos) => {
+                return obraEnProductos === item;
+            })
+            localStorage.setItem(`${obra[0].idObra}`,obra.length);
+        });
+
+        // localStorage.setItem('carrito', JSON.stringify(this.productos));
+        localStorage.setItem('carrito', JSON.stringify(productosSinDuplicados))
         localStorage.setItem('total', JSON.stringify(this.mostrarTotalCarrito()));
     }
     mostrarTotalCarrito() {
@@ -53,14 +69,16 @@ function vaciarCarrito() {
     let carrito = new Carrito();
     carrito.vaciarCarrito();
 }
+
 //BORRA UN PRODUCTO DEL CARRITO Y ACTUALIZA EL TOTAL
 function borrarProducto(indice) {
+
     this.productos = JSON.parse(localStorage.getItem('carrito'));
-    let o = this.productos.splice(indice, 1);
-
     let total = Number(JSON.parse(localStorage.getItem('total')));
-    total -= Number(o[0].precio);
-
+    let cantidad = localStorage.getItem(this.productos[indice].idObra);
+    console.log(this.productos);
+    let obraABorrar = this.productos.splice(indice, 1);
+    total -= Number(obraABorrar[0].precio)*cantidad;
     if (total == 0)
         vaciarCarrito();
     else {
@@ -68,7 +86,6 @@ function borrarProducto(indice) {
         localStorage.setItem('carrito', JSON.stringify(this.productos));
         location.reload();
     }
-
 }
 
 //CUANDO CARGA LA PAGINA, SI HAY PRODUCTOS EN EL CARRITO LOS MUESTA EN EL HTML
@@ -76,20 +93,24 @@ function onload() {
     let carrito = localStorage.getItem('carrito');
     if (carrito !== null) {
         carrito = JSON.parse(localStorage.getItem('carrito'));
+
         let tabla = document.getElementById('table-body');
         let fila;
         for (const obra of carrito) {
+            let cantidad = localStorage.getItem(obra.idObra );
             fila = document.createElement('tr');
             fila.innerHTML =
                 `<th scope="row">${obra.idObra}</th>
                         <td>${obra.nombre}</td>
-                        <td>${'no implementado aun'}</td>
+                        <td>${cantidad}</td>
                         <td>$${obra.precio}</td>
+                        <td>$${obra.precio*cantidad}</td>
                         <td> <a onclick="borrarProducto(${carrito.indexOf(obra)})"> <i class="fas fa-trash-alt"></i></a></td>`;
             tabla.appendChild(fila);
         }
         fila = document.createElement('tr');
         fila.innerHTML = `<th scope="row"></th>
+                        <td></td>
                         <td></td>
                         <td>Total Carrito</td>
                         <td>$${localStorage.getItem('total')}</td>`;
@@ -97,8 +118,9 @@ function onload() {
         fila = document.createElement('tr');
         fila.innerHTML = `<th scope="row"></th>
                         <td></td>
-                        <td>Vaciar Carrito</td>
-                        <td><button onclick="vaciarCarrito()">Vaciar</button></td>`;
+                        <td></td>
+                        <td><button class="btn rounded" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Comprar</button></td>
+                        <td><button class="btn rounded" onclick="vaciarCarrito()">Vaciar Carrito</button></td>`;
         tabla.appendChild(fila);
     }
 }
