@@ -23,8 +23,6 @@ class Carrito {
             localStorage.setItem(`${obra[0].idObra}`,obra.length);
         });
 
-        // console.log(productosSinDuplicados)s
-
         // localStorage.setItem('carrito', JSON.stringify(this.productos));
         localStorage.setItem('carrito', JSON.stringify(productosSinDuplicados))
         localStorage.setItem('total', JSON.stringify(this.mostrarTotalCarrito()));
@@ -71,14 +69,16 @@ function vaciarCarrito() {
     let carrito = new Carrito();
     carrito.vaciarCarrito();
 }
+
 //BORRA UN PRODUCTO DEL CARRITO Y ACTUALIZA EL TOTAL
 function borrarProducto(indice) {
+
     this.productos = JSON.parse(localStorage.getItem('carrito'));
-    let o = this.productos.splice(indice, 1);
-
     let total = Number(JSON.parse(localStorage.getItem('total')));
-    total -= Number(o[0].precio);
-
+    let cantidad = localStorage.getItem(this.productos[indice].idObra);
+    console.log(this.productos);
+    let obraABorrar = this.productos.splice(indice, 1);
+    total -= Number(obraABorrar[0].precio)*cantidad;
     if (total == 0)
         vaciarCarrito();
     else {
@@ -86,7 +86,6 @@ function borrarProducto(indice) {
         localStorage.setItem('carrito', JSON.stringify(this.productos));
         location.reload();
     }
-
 }
 
 //CUANDO CARGA LA PAGINA, SI HAY PRODUCTOS EN EL CARRITO LOS MUESTA EN EL HTML
@@ -120,8 +119,8 @@ function onload() {
         fila.innerHTML = `<th scope="row"></th>
                         <td></td>
                         <td></td>
-                        <td>Vaciar Carrito</td>
-                        <td><button onclick="vaciarCarrito()">Vaciar</button></td>`;
+                        <td><button class="btn rounded" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Comprar</button></td>
+                        <td><button class="btn rounded" onclick="vaciarCarrito()">Vaciar Carrito</button></td>`;
         tabla.appendChild(fila);
     }
 }

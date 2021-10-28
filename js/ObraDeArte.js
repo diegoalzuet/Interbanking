@@ -31,7 +31,8 @@ class ObraDeArte {
                                                 <p class="card-text">${this.tipoObra}</p>
                                                 <p class="card-text">${this.tecnicaAplicada}</p>
                                                 <p class="card-text">$${this.precio}</p>
-                                                <button id=${this.idObra} onclick="agregarAlCarrito(this.id)">Agregar a carrito</button>
+                                                <button id=${this.idObra} onclick="agregarAlCarrito(this.id)"
+                                                data-bs-toggle="modal" data-bs-target="#staticBackdrop">Agregar a carrito</button>
                                             </div>
                                         </div>
                                     </div>
