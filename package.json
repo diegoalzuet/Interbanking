@@ -1,0 +1,16 @@
+{
+  "name": "portafolioartistaalzuetwebjs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "sass --watch scss/style.scss css/style.css"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "sass": "^1.43.2",
+    "universal-parallax": "^1.3.2"
+  }
+}

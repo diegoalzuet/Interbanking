@@ -1,0 +1,117 @@
+@use "sass:math";
+
+$letra-titulo: 'Rock Salt', cursive;
+$letra-menu: 'Arial Narrow';
+$img-fondo: url('../img/fondo.jpg');
+$altura-mascara-blur: 115vh;
+
+//TAMAÑO LETRAS Y ESPACIADOS(Operaciones SASS)
+//Todas las letras y espaciados se modifican en base a este tamaño inicial.
+$size-letras:2rem;
+$espaciado-palabras:1vw;
+
+//MIXINS
+@mixin sizes($heigth) {
+    height : $heigth;
+}
+
+// BARRA DE NAVEGACION
+nav{
+    font-family: $letra-menu;
+    #logo{
+        font-family:$letra-titulo;
+        font-size: $size-letras; 
+    }
+    a{
+        font-size: math.div($size-letras, 2);
+    }
+}
+//FONDO
+.altura{
+    @include sizes($altura-mascara-blur);
+}
+//TITULOS
+h1{
+    font-family:$letra-titulo;
+    letter-spacing: $espaciado-palabras;
+    -webkit-text-stroke: 1px black;
+}
+//SUBTITULOS
+h4{
+    font-family:$letra-titulo;
+    letter-spacing: $espaciado-palabras*2;
+    -webkit-text-stroke: 1px black;
+}
+//Link a tienda en footer
+#link-tienda{
+    font-family:$letra-titulo;
+}
+//EFECTO Blur en fondo
+.mask-custom {
+    backdrop-filter: blur(3px);
+    background-color:rgba(17, 17, 17, 0.562);
+    min-height: $altura-mascara-blur;
+}
+//TEXTOS
+.parrafos{
+    font-size: math.div($size-letras, 3);
+    text-align: center;
+    line-height: math.div($size-letras * 7, 5);
+    letter-spacing: math.div($espaciado-palabras, 3);
+}
+//ZOOM GALERIA DE ARTE
+.zoom-out{
+	-webkit-transform: scale(1);
+	transform: scale(1);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+.zoom-out:hover{
+	-webkit-transform: scale(0.9);
+	transform: scale(0.9);
+}
+//ANIMACION TITULO PRINCIPAL
+.animar{
+    animation-duration: 4s;
+    animation-name: aparecer; 
+}
+@keyframes aparecer {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+//PARALAX 
+.parallax__container {
+	clip: rect(0, auto, auto, 0);
+	height: 100%;
+	left: 0;
+	overflow: hidden;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	z-index: -100;
+}
+.parallax {
+	position: fixed;
+	top: 0;
+	transform: translate3d(0, 0, 0);
+	transform-style: preserve-3d;
+	width: 120%;    
+    background-image:  $img-fondo;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.carousel-caption{
+    opacity:0;
+    transition:500ms ease-in-out;
+  }
+  .carousel-item:hover .carousel-caption{
+    opacity:1;
+  }
+
+
+
