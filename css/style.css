@@ -83,21 +83,20 @@ h4 {
   top: 0;
   transform: translate3d(0, 0, 0);
   transform-style: preserve-3d;
-  width: 110%;
+  width: 120%;
   background-image: url("../img/fondo.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-.carousel-caption{
-  opacity:0;
-  transition:500ms ease-in-out;
+.carousel-caption {
+  opacity: 0;
+  transition: 500ms ease-in-out;
 }
-.carousel-item:hover .carousel-caption{
-  opacity:1;
+
+.carousel-item:hover .carousel-caption {
+  opacity: 1;
 }
+
 /*# sourceMappingURL=style.css.map */
-html {
-  scroll-behavior: smooth;
-}

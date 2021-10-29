@@ -119,7 +119,7 @@ function onload() {
         fila.innerHTML = `<th scope="row"></th>
                         <td></td>
                         <td></td>
-                        <td><button class="btn rounded" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Comprar</button></td>
+                        <td><button class="btn rounded" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Pagar</button></td>
                         <td><button class="btn rounded" onclick="vaciarCarrito()">Vaciar Carrito</button></td>`;
         tabla.appendChild(fila);
     }
