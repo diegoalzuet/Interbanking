@@ -5,7 +5,7 @@
         "tipoObra": "Tipo de obra JSON",
         "tecnicaAplicada": "Tecnica Aplicada JSON",
         "precio": 1200,
-        "rutaImg":"../img/img1.png"
+        "rutaImg":"../img/img1.webp"
     },
     {
         "idObra": 1,
@@ -13,7 +13,7 @@
         "tipoObra": "Tipo de obra JSON",
         "tecnicaAplicada": "Tecnica Aplicada JSON",
         "precio": 3200,
-        "rutaImg":"../img/img2.png"
+        "rutaImg":"../img/img2.webp"
     },
     {
         "idObra": 2,
@@ -21,7 +21,7 @@
         "tipoObra": "Tipo de obra JSON",
         "tecnicaAplicada": "Tecnica Aplicada JSON",
         "precio": 5400,
-        "rutaImg":"../img/img3.png"
+        "rutaImg":"../img/img3.webp"
     },
     {
         "idObra": 3,
@@ -29,7 +29,7 @@
         "tipoObra": "Tipo de obra JSON",
         "tecnicaAplicada": "Tecnica Aplicada JSON",
         "precio": 7600,
-        "rutaImg":"../img/img4.png"
+        "rutaImg":"../img/img4.webp"
     },
     {
         "idObra": 4,
@@ -37,7 +37,7 @@
         "tipoObra": "Tipo de obra JSON",
         "tecnicaAplicada": "Tecnica Aplicada JSON",
         "precio": 9600,
-        "rutaImg":"../img/img5.jpg"
+        "rutaImg":"../img/img5.webp"
     },
     {
         "idObra": 5,
@@ -45,7 +45,7 @@
         "tipoObra": "Tipo de obra JSON",
         "tecnicaAplicada": "Tecnica Aplicada JSON",
         "precio": 6200,
-        "rutaImg":"../img/img7.png"
+        "rutaImg":"../img/img7.webp"
     },
     {
         "idObra": 6,
@@ -53,7 +53,7 @@
         "tipoObra": "Tipo de obra JSON",
         "tecnicaAplicada": "Tecnica Aplicada JSON",
         "precio": 7120,
-        "rutaImg":"../img/img6.jpg"
+        "rutaImg":"../img/img6.webp"
     },
     {
         "idObra": 7,
@@ -61,6 +61,6 @@
         "tipoObra": "Tipo de obra JSON",
         "tecnicaAplicada": "Tecnica Aplicada JSON",
         "precio": 12900,
-        "rutaImg":"../img/img8.png"
+        "rutaImg":"../img/img8.webp"
     }
 ]

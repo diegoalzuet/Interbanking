@@ -84,7 +84,7 @@ h4 {
   transform: translate3d(0, 0, 0);
   transform-style: preserve-3d;
   width: 120%;
-  background-image: url("../img/fondo.jpg");
+  background-image: url("../img/fondo.webp");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
