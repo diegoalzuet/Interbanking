@@ -24,22 +24,13 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
 </head>
 
-<body onload="onload()">
+<body >
     <!--HEADER-->
-    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark fixed-top">
         <a id="logo" class="navbar-brand mx-1 px-3" href="../index.html">TA</a>
-        <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#menu-home">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse justify-content-end" id="menu-home">
-            <div class="navbar-nav">
-                <a class="nav-item nav-link mx-2" href="#">Carrito</a>
-            </div>
-        </div>
     </nav>
     <!--FIN HEADER-->
-    <div class="container">
-
+    <div class="container mt-5">
         <div class="row w-75 m-auto py-5 align-items-center">
             <a href="../paginas/tienda.html"><i class="far fa-hand-point-left text-black fs-3"></i></a>
             <h1 class="text-center">Carrito</h1>
@@ -47,7 +38,7 @@
     </div>
 
     <div class="container pb-5">
-        <table class="table">
+        <table class="table table-hover table-sm">
             <thead>
                 <tr>
                     <th scope="col">Codigo</th>
@@ -58,13 +49,12 @@
                     <th scope="col"></th>
                 </tr>
             </thead>
-            <tbody id="table-body">
-            </tbody>
-            <tfoot id="table-footer">
 
-            </tfoot>
+            <tbody id="table-body"></tbody>
+            <tfoot id="table-footer"></tfoot>
         </table>
     </div>
+
 
     <!-- MODAL -->
     <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
@@ -79,7 +69,7 @@
                     La Compra fue realizada correctamente
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" onclick="vaciarCarrito()"
+                    <button type="button" class="btn btn-secondary" onclick="carrito.vaciarCarrito()"
                         data-bs-dismiss="modal">Salir</button>
                 </div>
             </div>
