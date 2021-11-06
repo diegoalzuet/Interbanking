@@ -53,6 +53,6 @@ class Tienda {
        
     }
     actualizarCantidadProductos(){
-        document.getElementById("total-carrito").innerHTML = `(${this.totalCarrito})`;
+        document.getElementById("total-carrito").innerHTML = `${this.totalCarrito}`;
     }
 }
