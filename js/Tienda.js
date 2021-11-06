@@ -46,18 +46,13 @@ class Tienda {
         obraEnCarrito.cantidad ? obraEnCarrito.cantidad++ : obraEnCarrito.cantidad=1;
 
         if (obraEnCarrito.cantidad === 1) this.carrito.push(obraEnCarrito);
+        this.totalCarrito++;
         localStorage.carrito = JSON.stringify(this.carrito);
-        this.calcularTotalProductos();
+        localStorage.totalCarrito= this.totalCarrito;
+        this.actualizarCantidadProductos();
+       
     }
-    calcularTotalProductos(){
-        document.getElementById("total-carrito").innerHTML = `(${this.carrito.length})`;
-
+    actualizarCantidadProductos(){
+        document.getElementById("total-carrito").innerHTML = `(${this.totalCarrito})`;
     }
 }
-
-if(localStorage.carrito)
-    {
-        this.carrito = JSON.parse(localStorage.carrito);
-        
-    }
-

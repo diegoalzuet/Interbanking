@@ -98,7 +98,10 @@ class Carrito {
 
         const indice = this.productos.findIndex(obra => obra.idObra === id);
         if (indice >= 0) {
-            this.productos.splice(indice, 1);
+            let obraABorrar = this.productos.splice(indice, 1);
+            // console.log(obraABorrar[0]);
+            // prompt()
+            localStorage.totalCarrito= JSON.stringify(JSON.parse(localStorage.totalCarrito)-obraABorrar[0].cantidad);
             this.productos.length > 0 ? localStorage.carrito = JSON.stringify(this.productos) : this.vaciarCarrito();
             location.reload();
         }
