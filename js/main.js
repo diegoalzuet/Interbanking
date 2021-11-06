@@ -4,6 +4,7 @@ miTienda.cargarCatalago();
 
 if (localStorage.carrito){
     miTienda.carrito = JSON.parse(localStorage.carrito);
-    miTienda.calcularTotalProductos();
+    miTienda.totalCarrito=JSON.parse(localStorage.totalCarrito);
+    miTienda.actualizarCantidadProductos();
 }
 
