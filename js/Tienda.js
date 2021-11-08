@@ -43,16 +43,29 @@ class Tienda {
     agregarAlCarrito(id) {
         let obraAAgregar = this.catalogo.find(obra => obra.idObra === id);
         let obraEnCarrito = this.carrito.find(obra => obra.idObra === obraAAgregar.idObra) || obraAAgregar;
-        obraEnCarrito.cantidad ? obraEnCarrito.cantidad++ : obraEnCarrito.cantidad=1;
+        obraEnCarrito.cantidad ? obraEnCarrito.cantidad++ : obraEnCarrito.cantidad = 1;
 
         if (obraEnCarrito.cantidad === 1) this.carrito.push(obraEnCarrito);
         this.totalCarrito++;
         localStorage.carrito = JSON.stringify(this.carrito);
-        localStorage.totalCarrito= this.totalCarrito;
+        localStorage.totalCarrito = this.totalCarrito;
         this.actualizarCantidadProductos();
-       
+
     }
-    actualizarCantidadProductos(){
+    actualizarCantidadProductos() {
         document.getElementById("total-carrito").innerHTML = `${this.totalCarrito}`;
     }
+
+
+    ordenarPrecioMayorMenor() {
+        this.catalogo.sort((producto1, producto2) => producto2.precio - producto1.precio);
+    }
+    ordenarPrecioMenorMayor() {
+        this.catalogo.sort((producto1, producto2) => producto1.precio - producto2.precio);
+    }
+
+
+
+
 }
+

@@ -36,7 +36,7 @@
             <div class="navbar-nav">
                 <a class="nav-item nav-link mx-2 px-3" href="../paginas/carrito.html">
                     <i class="fas fa-cart-plus white-text px-2"></i>
-                     <span class="badge badge-pill blue" id="total-carrito">0</span>   
+                    <span class="badge badge-pill blue" id="total-carrito">0</span>
                 </a>
             </div>
         </div>
@@ -50,7 +50,43 @@
     </div>
     <div class="container">
         <div class="row">
-            <h5 class="text-center">filtros y ordenar</h3>
+            <div class="col-sm-6">
+                <select id="select-ordenar" class="form-select" aria-label="Default select example">
+                    <option selected>Ordenar por precio</option>
+                    <option value="1">De mayor a menor</option>
+                    <option value="2">De menor a mayor</option>
+                </select>
+            </div>
+            <div class="col-sm-3">
+                Filtro Tipo de Obra:
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="Tipo de obra A" name="check-filtros" id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault">
+                        Tipo de obra A
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="Tipo de obra B" name="check-filtros" id="flexCheckChecked">
+                    <label class="form-check-label" for="flexCheckChecked">
+                        Tipo de obra B
+                    </label>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                Filtro Tecnica Aplicada:
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="Tecnica Aplicada 1" name="check-filtros" id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault">
+                        Tecnica aplicada 1
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="Tecnica Aplicada 2" name="check-filtros" id="flexCheckChecked">
+                    <label class="form-check-label" for="flexCheckChecked">
+                        Tecnica Aplicada 2
+                    </label>
+                </div>
+            </div>
         </div>
     </div>
     <!--CARDS-->
