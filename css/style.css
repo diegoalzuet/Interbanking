@@ -68,6 +68,7 @@ h4 {
   }
 }
 .parallax__container {
+  
   clip: rect(0, auto, auto, 0);
   height: 100%;
   left: 0;
@@ -79,20 +80,24 @@ h4 {
 }
 
 .parallax {
+  background-image: url("../img/fondo.webp");
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   position: fixed;
   top: 0;
   transform: translate3d(0, 0, 0);
   transform-style: preserve-3d;
   width: 120%;
-  background-image: url("../img/fondo.webp");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+ 
 }
 
 .carousel-caption {
   opacity: 0;
-  transition: 500ms ease-in-out;
+  background-color: #0e0d0ed2;
+  transition: 600ms ease-in-out;
+  padding: 10px 3px ;
 }
 
 .carousel-item:hover .carousel-caption {

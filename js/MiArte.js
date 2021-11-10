@@ -27,3 +27,9 @@ $("#btn-mas-menos").click(() => {
     });
 }
 );
+
+$(".imagen-modal").click((e)=>{
+    console.log(e.target.src)
+    let imagen = document.getElementById("imagen-en-modal");
+    imagen.src = e.target.src;
+})
