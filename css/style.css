@@ -68,7 +68,6 @@ h4 {
   }
 }
 .parallax__container {
-  
   clip: rect(0, auto, auto, 0);
   height: 100%;
   left: 0;
@@ -90,18 +89,52 @@ h4 {
   transform: translate3d(0, 0, 0);
   transform-style: preserve-3d;
   width: 120%;
- 
 }
 
 .carousel-caption {
   opacity: 0;
   background-color: #0e0d0ed2;
   transition: 600ms ease-in-out;
-  padding: 10px 3px ;
+  padding: 10px 3px;
 }
 
 .carousel-item:hover .carousel-caption {
   opacity: 1;
+}
+
+.flecha {
+  animation: arrow 1s ease-in-out infinite;
+}
+.flecha:hover {
+  animation: arrow 1s ease-out infinite !important;
+  color: #229bf4;
+}
+
+@keyframes arrow {
+  0% {
+    transform: translate(0px, 0px);
+  }
+  50% {
+    transform: translate(0px, 10px);
+  }
+  100% {
+    transform: translate(0px, 0px);
+  }
+}
+
+.hover-fade p {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  background-color: #333;
+}
+.hover-fade img {
+  cursor: zoom-in;
+  transition: all 0.5s ease-in-out;
+}
+.hover-fade:hover img {
+  transform: scale(1.2);
+  opacity: 0.5;
 }
 
 /*# sourceMappingURL=style.css.map */
